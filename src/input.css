@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Custom Utility Classes */
+@layer components {
+    .section-heading {
+        @apply text-3xl font-bold mb-10 relative inline-block after:content-[''] after:absolute after:w-2/3 after:h-1 after:bg-accent after:bottom-0 after:left-0 after:-mb-2;
+    }
+    
+    .skill-card {
+        @apply bg-white rounded-xl shadow-elegant p-6 flex flex-col items-center transition duration-300 transform hover:scale-105 hover:shadow-lg;
+    }
+    
+    .elegant-button {
+        @apply inline-block bg-primary text-white px-8 py-3 rounded-full font-semibold hover:bg-blue-600 transition duration-300 shadow-btn hover:shadow-lg;
+    }
+}

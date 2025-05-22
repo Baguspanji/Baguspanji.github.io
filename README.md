@@ -46,13 +46,30 @@ This portfolio website showcases a fullstack programmer's skills, work experienc
 
 ## Setup and Usage
 
-This is a static website that can be deployed on any web server or hosting service. Simply clone the repository and open `index.html` in a web browser.
+### Development Setup
 
-```bash
-git clone https://github.com/Baguspanji/Baguspanji.github.io.git
-cd Baguspanji.github.io
-# Open index.html in your browser
-```
+1. Clone the repository
+   ```bash
+   git clone https://github.com/Baguspanji/Baguspanji.github.io.git
+   cd Baguspanji.github.io
+   ```
+
+2. Install dependencies
+   ```bash
+   yarn install
+   ```
+
+3. Build the CSS
+   ```bash
+   yarn build
+   ```
+
+4. For development with live CSS reloading
+   ```bash
+   yarn watch
+   ```
+
+5. Open `index.html` in your browser
 
 ## Live Demo
 

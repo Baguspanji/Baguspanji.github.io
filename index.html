@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html class="scroll-smooth" lang="id">
 
 <head>
@@ -6,103 +7,83 @@
     <title>
         Portofolio Fullstack Programmer
     </title>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        primary: '#653f28',
-                    },
-                },
-            },
-        }
-    </script>
-    <script src="https://cdn.tailwindcss.com">
-    </script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <link href="./dist/output.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
         }
 
-        /* Smooth Scroll */
-        html {
-            scroll-behavior: smooth;
-        }
-
-        /* Custom Scrollbar */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
+        .gradient-text {
+            background: linear-gradient(90deg, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
     </style>
 </head>
 
-<body class="bg-gray-50 text-gray-800">
-    <header class="bg-white shadow-md fixed w-full z-30">
+<body class="bg-light text-secondary">
+    <header class="bg-white shadow-elegant fixed w-full z-30">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <a class="text-2xl font-bold text-primary" href="#home">
+            <a class="text-2xl font-bold gradient-text" href="#home">
                 Portofolio
             </a>
-            <nav class="hidden md:flex space-x-8 font-semibold text-gray-700">
-                <a class="hover:text-primary transition" href="#about">
+            <nav class="hidden md:flex space-x-8 font-medium text-gray-700">
+                <a class="hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                    href="#about">
                     Tentang Saya
                 </a>
-                <a class="hover:text-primary transition" href="#skills">
+                <a class="hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                    href="#skills">
                     Keahlian
                 </a>
-                <a class="hover:text-primary transition" href="#experience">
+                <a class="hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                    href="#experience">
                     Pengalaman
                 </a>
-                <a class="hover:text-primary transition" href="#education">
+                <a class="hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                    href="#education">
                     Pendidikan
                 </a>
-                <a class="hover:text-primary transition" href="#projects">
+                <a class="hover:text-primary transition-colors duration-300 relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+                    href="#projects">
                     Proyek
                 </a>
-                <a class="hover:text-primary transition" href="#contact">
+                <a class="elegant-button !py-2 !px-6 !rounded-full !text-sm" href="#contact">
                     Kontak
                 </a>
             </nav>
-            <button class="md:hidden text-gray-700 focus:outline-none" id="menu-btn">
+            <button class="md:hidden text-gray-700 focus:outline-none z-50" id="menu-btn">
                 <i class="fas fa-bars fa-lg">
                 </i>
             </button>
         </div>
-        <nav class="hidden md:hidden bg-white shadow-md" id="mobile-menu">
-            <a class="block px-6 py-3 border-b border-gray-200 font-semibold hover:bg-gray-50 transition" href="#about">
+        <nav class="hidden md:hidden bg-white shadow-elegant fixed inset-0 z-40 flex flex-col justify-center items-center"
+            id="mobile-menu">
+            <a class="block px-6 py-4 text-xl font-medium text-center hover:text-primary transition-colors"
+                href="#about">
                 Tentang Saya
             </a>
-            <a class="block px-6 py-3 border-b border-gray-200 font-semibold hover:bg-gray-50 transition"
+            <a class="block px-6 py-4 text-xl font-medium text-center hover:text-primary transition-colors"
                 href="#skills">
                 Keahlian
             </a>
-            <a class="block px-6 py-3 border-b border-gray-200 font-semibold hover:bg-gray-50 transition"
+            <a class="block px-6 py-4 text-xl font-medium text-center hover:text-primary transition-colors"
                 href="#experience">
                 Pengalaman
             </a>
-            <a class="block px-6 py-3 border-b border-gray-200 font-semibold hover:bg-gray-50 transition"
+            <a class="block px-6 py-4 text-xl font-medium text-center hover:text-primary transition-colors"
                 href="#education">
                 Pendidikan
             </a>
-            <a class="block px-6 py-3 border-b border-gray-200 font-semibold hover:bg-gray-50 transition"
+            <a class="block px-6 py-4 text-xl font-medium text-center hover:text-primary transition-colors"
                 href="#projects">
                 Proyek
             </a>
-            <a class="block px-6 py-3 font-semibold hover:bg-gray-50 transition" href="#contact">
+            <a class="block px-6 py-4 text-xl font-medium text-center elegant-button mt-4" href="#contact">
                 Kontak
             </a>
         </nav>
@@ -110,295 +91,592 @@
 
     <main class="pt-24 max-w-7xl mx-auto px-6">
         <!-- Hero Section -->
-        <section class="flex flex-col-reverse md:flex-row items-center gap-10 md:gap-20 py-16" id="home">
-            <div class="md:w-1/2 text-center md:text-left">
-                <h1 class="text-4xl md:text-5xl font-extrabold text-primary mb-4">
-                    Halo, Saya Fullstack Programmer
+        <section class="min-h-screen flex flex-col-reverse md:flex-row items-center gap-10 md:gap-20 py-16" id="home">
+            <div class="md:w-1/2 text-center md:text-left" data-aos="fade-right" data-aos-duration="1000">
+                <span
+                    class="text-sm md:text-base text-primary font-medium tracking-wider uppercase mb-4 inline-block">Fullstack
+                    Developer</span>
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">
+                    <span class="gradient-text">Halo, Saya </span>
+                    <span class="block mt-2">Fullstack Programmer</span>
                 </h1>
-                <p class="text-lg md:text-xl text-gray-700 mb-6">
-                    Saya dapat membuatkan website administrasi, absensi instansi, company profile, dan lain sebagainya.
+                <p class="text-lg md:text-xl text-gray-600 mb-8 leading-relaxed">
+                    Saya dapat membuatkan website administrasi, absensi instansi, company profile, dan lain sebagainya
+                    dengan teknologi terbaru dan desain yang menarik.
                 </p>
-                <a class="inline-block bg-gray-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-gray-700 transition"
-                    href="#contact">
-                    Hubungi Saya
-                </a>
+                <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                    <a class="elegant-button" href="#contact">
+                        Hubungi Saya
+                    </a>
+                    <a class="inline-block border-2 border-primary text-primary px-8 py-3 rounded-full font-semibold hover:bg-primary hover:text-white transition duration-300"
+                        href="#projects">
+                        Lihat Proyek
+                    </a>
+                </div>
             </div>
-            <div class="md:w-1/2">
-                <img alt="Seorang programmer fullstack sedang bekerja di depan laptop dengan kode di layar, suasana modern dan profesional"
-                    class="rounded-lg shadow-lg mx-auto object-cover max-h-[26rem]" height="300"
-                    src="assets/profile-me.png" width="400" />
+            <div class="md:w-1/2" data-aos="fade-left" data-aos-duration="1000">
+                <div class="relative">
+                    <div
+                        class="absolute inset-0 bg-primary rounded-full opacity-10 blur-3xl transform -translate-y-4 translate-x-4">
+                    </div>
+                    <img alt="Seorang programmer fullstack sedang bekerja di depan laptop dengan kode di layar, suasana modern dan profesional"
+                        class="rounded-3xl shadow-elegant mx-auto object-cover relative z-10 max-h-[26rem]"
+                        src="assets/profile-me.png" />
+                </div>
             </div>
         </section>
 
         <!-- About Section -->
-        <section class="py-16 border-t border-gray-200" id="about">
-            <h2 class="text-3xl font-bold text-primary mb-8 text-center">
-                Tentang Saya
-            </h2>
-            <div class="max-w-4xl mx-auto text-center text-gray-700 text-lg leading-relaxed">
-                <p>
-                    Saya seorang fullstack programmer dengan pengalaman membuat berbagai jenis website seperti
-                    administrasi, absensi instansi, company profile, dan lain sebagainya. Saya menguasai berbagai bahasa
-                    pemrograman dan framework yang membantu saya dalam mengembangkan aplikasi yang efisien dan
-                    berkualitas.
-                </p>
+        <section class="py-20" id="about">
+            <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <div class="text-center mb-12">
+                    <h2 class="section-heading text-center mx-auto after:right-0 after:mx-auto">
+                        Tentang Saya
+                    </h2>
+                </div>
+                <div class="bg-white rounded-xl shadow-elegant p-8 text-center md:text-left">
+                    <div class="text-gray-600 text-lg leading-relaxed space-y-4">
+                        <p>
+                            Saya seorang <span class="text-primary font-medium">fullstack programmer</span> dengan
+                            pengalaman membuat berbagai jenis website seperti
+                            administrasi, absensi instansi, company profile, dan lain sebagainya.
+                        </p>
+                        <p>
+                            Saya menguasai berbagai bahasa pemrograman dan framework yang membantu saya dalam
+                            mengembangkan
+                            aplikasi yang efisien, skalabel, dan berkualitas tinggi dengan antarmuka pengguna yang
+                            menarik.
+                        </p>
+                        <div class="flex flex-wrap justify-center md:justify-start gap-4 mt-6">
+                            <span class="px-4 py-2 bg-blue-50 text-primary rounded-full text-sm font-medium">Design
+                                Thinking</span>
+                            <span class="px-4 py-2 bg-blue-50 text-primary rounded-full text-sm font-medium">Problem
+                                Solving</span>
+                            <span class="px-4 py-2 bg-blue-50 text-primary rounded-full text-sm font-medium">Team
+                                Collaboration</span>
+                            <span class="px-4 py-2 bg-blue-50 text-primary rounded-full text-sm font-medium">Agile
+                                Development</span>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Skills Section -->
-        <section class="py-16 bg-gray-400 rounded-lg" id="skills">
-            <h2 class="text-3xl font-bold text-white mb-8 text-center">
-                Keahlian Saya
-            </h2>
-            <div
-                class="max-w-5xl mx-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 gap-2 md:gap-8 px-4 text-center">
-                <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-                    <i class="fab fa-php fa-3x text-primary mb-4"></i>
-                    <h3 class="font-semibold text-lg">
-                        PHP
-                    </h3>
+        <section class="py-20" id="skills">
+            <div class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <div class="text-center mb-12">
+                    <h2 class="section-heading text-center mx-auto after:right-0 after:mx-auto">
+                        Keahlian Saya
+                    </h2>
                 </div>
-                <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-                    <i class="fab fa-js-square fa-3x text-yellow-400 mb-4">
-                    </i>
-                    <h3 class="font-semibold text-lg">
-                        JavaScript
-                    </h3>
-                </div>
-                <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-                    <img alt="Logo bahasa pemrograman Golang berwarna biru dengan huruf Go" class="mb-[4px]" height="48"
-                        src="assets/logo-golang.png" width="68" />
-                    <h3 class="font-semibold text-lg">
-                        Golang
-                    </h3>
-                </div>
-                <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-                    <img alt="Logo framework Flutter berwarna biru dengan simbol sayap" class="mb-[26px]" height="38"
-                        src="assets/logo-flutter.png" width="38" />
-                    <h3 class="font-semibold text-lg">
-                        Flutter
-                    </h3>
-                </div>
-                <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-                    <img alt="Logo framework Laravel berwarna merah dengan tulisan Laravel" class="mb-4" height="48"
-                        src="assets/logo-laravel.png" width="48" />
-                    <h3 class="font-semibold text-lg">
-                        Laravel
-                    </h3>
-                </div>
-                <div class="bg-white rounded-lg shadow p-6 flex flex-col items-center">
-                    <img alt="Logo framework CodeIgniter berwarna merah dengan simbol roda gigi" class="mb-4"
-                        height="48" src="assets/logo-codeigniter.png" width="48" />
-                    <h3 class="font-semibold text-lg">
-                        CodeIgniter
-                    </h3>
+                <div class="gradient-bg rounded-2xl p-1">
+                    <div class="bg-white rounded-xl p-8">
+                        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-6 px-4">
+                            <div class="skill-card group" data-aos="zoom-in" data-aos-delay="100">
+                                <div class="mb-4 text-gray-400 group-hover:text-primary transition-colors duration-300">
+                                    <i class="fab fa-php fa-3x"></i>
+                                </div>
+                                <h3 class="font-medium text-lg">
+                                    PHP
+                                </h3>
+                            </div>
+                            <div class="skill-card group" data-aos="zoom-in" data-aos-delay="200">
+                                <div
+                                    class="mb-4 text-gray-400 group-hover:text-yellow-400 transition-colors duration-300">
+                                    <i class="fab fa-js fa-3x"></i>
+                                </div>
+                                <h3 class="font-medium text-lg">
+                                    JavaScript
+                                </h3>
+                            </div>
+                            <div class="skill-card group" data-aos="zoom-in" data-aos-delay="300">
+                                <div class="mb-4">
+                                    <img alt="Logo bahasa pemrograman Golang berwarna biru dengan huruf Go"
+                                        class="h-12 w-auto transition-transform duration-300 group-hover:scale-110"
+                                        src="assets/logo-golang.png" />
+                                </div>
+                                <h3 class="font-medium text-lg">
+                                    Golang
+                                </h3>
+                            </div>
+                            <div class="skill-card group" data-aos="zoom-in" data-aos-delay="400">
+                                <div class="mb-4">
+                                    <img alt="Logo framework Flutter berwarna biru dengan simbol sayap"
+                                        class="h-12 w-auto transition-transform duration-300 group-hover:scale-110"
+                                        src="assets/logo-flutter.png" />
+                                </div>
+                                <h3 class="font-medium text-lg">
+                                    Flutter
+                                </h3>
+                            </div>
+                            <div class="skill-card group" data-aos="zoom-in" data-aos-delay="500">
+                                <div class="mb-4">
+                                    <img alt="Logo framework Laravel berwarna merah dengan tulisan Laravel"
+                                        class="h-12 w-auto transition-transform duration-300 group-hover:scale-110"
+                                        src="assets/logo-laravel.png" />
+                                </div>
+                                <h3 class="font-medium text-lg">
+                                    Laravel
+                                </h3>
+                            </div>
+                            <div class="skill-card group" data-aos="zoom-in" data-aos-delay="600">
+                                <div class="mb-4">
+                                    <img alt="Logo framework CodeIgniter berwarna merah dengan simbol roda gigi"
+                                        class="h-12 w-auto transition-transform duration-300 group-hover:scale-110"
+                                        src="assets/logo-codeigniter.png" />
+                                </div>
+                                <h3 class="font-medium text-lg">
+                                    CodeIgniter
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Experience Section -->
-        <section class="py-16 border-t border-gray-200" id="experience">
-            <h2 class="text-3xl font-bold text-primary mb-8 text-center">
-                Pengalaman Kerja
-            </h2>
-            <div class="max-w-4xl mx-auto space-y-8">
-                <article class="bg-white rounded-lg shadow p-6">
-                    <h3 class="text-xl font-semibold text-gray-700">
-                        Backend Developer
-                    </h3>
-                    <p class="text-gray-600 italic mb-2">
-                        Icon Plus - 2022 hingga sekarang
-                    </p>
-                    <p class="text-gray-700">
-                        Bertanggung jawab pada pengembangan API menggunakan Golang, Laravel dan integrasi dengan
-                        frontend.
-                        Meningkatkan keamanan dan skalabilitas sistem backend.
-                    </p>
-                </article>
-                <article class="bg-white rounded-lg shadow p-6">
-                    <h3 class="text-xl font-semibold text-gray-700">
-                        Frontend Developer
-                    </h3>
-                    <p class="text-gray-600 italic mb-2">
-                        Jongjava Tecnology - 2021 hingga 2022
-                    </p>
-                    <p class="text-gray-700">
-                        Mengembangkan dan memelihara aplikasi web administrasi dan absensi instansi menggunakan Laravel
-                        dan Flutter. Berkolaborasi dengan tim untuk meningkatkan performa dan fitur aplikasi.
-                    </p>
-                </article>
-                <article class="bg-white rounded-lg shadow p-6">
-                    <h3 class="text-xl font-semibold text-gray-700">
-                        Junior Programmer
-                    </h3>
-                    <p class="text-gray-600 italic mb-2">
-                        Freelance Website - 2019 hingga 2021
-                    </p>
-                    <p class="text-gray-700">
-                        Membantu pengembangan website company profile dan sistem absensi menggunakan PHP (CodeIgniter
-                        dan Laravel). Melakukan debugging dan testing aplikasi.
-                    </p>
-                </article>
+        <section class="py-20" id="experience">
+            <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <div class="text-center mb-12">
+                    <h2 class="section-heading text-center mx-auto after:right-0 after:mx-auto">
+                        Pengalaman Kerja
+                    </h2>
+                </div>
+                <div class="relative">
+                    <!-- Timeline line -->
+                    <div
+                        class="absolute left-0 md:left-1/2 top-0 h-full w-0.5 bg-gray-200 transform md:-translate-x-1/2">
+                    </div>
+
+                    <!-- Timeline items -->
+                    <div class="space-y-12">
+                        <div class="relative" data-aos="fade-right" data-aos-delay="100">
+                            <div
+                                class="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white">
+                            </div>
+                            <div class="md:w-1/2 md:pr-10 md:text-right">
+                                <div
+                                    class="bg-white p-6 rounded-xl shadow-elegant hover:shadow-lg transition-shadow duration-300">
+                                    <h3 class="text-xl font-semibold text-primary">
+                                        Backend Developer
+                                    </h3>
+                                    <p class="text-gray-500 italic mb-3">
+                                        Icon Plus - 2022 hingga sekarang
+                                    </p>
+                                    <p class="text-gray-600">
+                                        Bertanggung jawab pada pengembangan API menggunakan Golang, Laravel dan
+                                        integrasi dengan
+                                        frontend. Meningkatkan keamanan dan skalabilitas sistem backend.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative" data-aos="fade-left" data-aos-delay="200">
+                            <div
+                                class="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white">
+                            </div>
+                            <div class="ml-auto md:w-1/2 md:pl-10">
+                                <div
+                                    class="bg-white p-6 rounded-xl shadow-elegant hover:shadow-lg transition-shadow duration-300">
+                                    <h3 class="text-xl font-semibold text-primary">
+                                        Frontend Developer
+                                    </h3>
+                                    <p class="text-gray-500 italic mb-3">
+                                        Jongjava Tecnology - 2021 hingga 2022
+                                    </p>
+                                    <p class="text-gray-600">
+                                        Mengembangkan dan memelihara aplikasi web administrasi dan absensi instansi
+                                        menggunakan Laravel
+                                        dan Flutter. Berkolaborasi dengan tim untuk meningkatkan performa dan fitur
+                                        aplikasi.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="relative" data-aos="fade-right" data-aos-delay="300">
+                            <div
+                                class="hidden md:block absolute left-1/2 top-0 -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-white">
+                            </div>
+                            <div class="md:w-1/2 md:pr-10 md:text-right">
+                                <div
+                                    class="bg-white p-6 rounded-xl shadow-elegant hover:shadow-lg transition-shadow duration-300">
+                                    <h3 class="text-xl font-semibold text-primary">
+                                        Junior Programmer
+                                    </h3>
+                                    <p class="text-gray-500 italic mb-3">
+                                        Freelance Website - 2019 hingga 2021
+                                    </p>
+                                    <p class="text-gray-600">
+                                        Membantu pengembangan website company profile dan sistem absensi menggunakan PHP
+                                        (CodeIgniter
+                                        dan Laravel). Melakukan debugging dan testing aplikasi.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- Education Section -->
-        <section class="py-16 bg-gray-400 rounded-lg" id="education">
-            <h2 class="text-3xl font-bold text-white mb-8 text-center">
-                Pendidikan
-            </h2>
-            <div class="px-4 max-w-3xl mx-auto space-y-6">
-                <article class="flex flex-col md:flex-row bg-white rounded-lg shadow p-6 flex items-center gap-6">
-                    <img alt="Logo Universitas Yudharta berwarna biru dengan simbol buku dan pena"
-                        class="w-24 h-24 rounded-full object-cover" height="100" src="assets/logo-yudharta.png"
-                        width="100" />
-                    <div>
-                        <h3 class="text-center md:text-left text-xl font-semibold text-gray-700">
-                            Sarjana S1 Teknik Informatika
-                        </h3>
-                        <p class="text-center md:text-left text-gray-600 italic">
-                            Universitas Yudharta - Lulus 2021
-                        </p>
-                        <p class="text-center md:text-left text-gray-700 mt-2">
-                            Menyelesaikan pendidikan sarjana dengan fokus pada pengembangan perangkat lunak, algoritma,
-                            dan sistem komputer.
-                        </p>
+        <section class="py-20" id="education">
+            <div class="max-w-4xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <div class="text-center mb-12">
+                    <h2 class="section-heading text-center mx-auto after:right-0 after:mx-auto">
+                        Pendidikan
+                    </h2>
+                </div>
+                <div class="gradient-bg rounded-2xl p-1">
+                    <div class="bg-white rounded-xl p-8 flex flex-col md:flex-row items-center gap-8">
+                        <div class="md:w-1/3 flex justify-center">
+                            <div class="p-6 rounded-full bg-blue-50">
+                                <img alt="Logo Universitas Yudharta" class="w-32 h-32 object-contain"
+                                    src="assets/logo-yudharta.png" />
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 text-center md:text-left">
+                            <h3 class="text-2xl font-bold text-secondary mb-2">
+                                Sarjana S1 Teknik Informatika
+                            </h3>
+                            <p class="text-xl text-primary font-medium mb-4">
+                                Universitas Yudharta - Lulus 2021
+                            </p>
+                            <p class="text-gray-600 leading-relaxed">
+                                Menyelesaikan pendidikan sarjana dengan fokus pada pengembangan perangkat lunak,
+                                algoritma,
+                                dan sistem komputer. Mendapatkan pengetahuan mendalam tentang bahasa pemrograman,
+                                database,
+                                dan pengembangan aplikasi berbasis web dan mobile.
+                            </p>
+                            <div class="mt-6 flex flex-wrap gap-2 justify-center md:justify-start">
+                                <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm">OOP</span>
+                                <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm">Database
+                                    Design</span>
+                                <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm">Web
+                                    Development</span>
+                                <span class="px-3 py-1 bg-blue-50 text-primary rounded-full text-sm">Mobile Apps</span>
+                            </div>
+                        </div>
                     </div>
-                </article>
+                </div>
             </div>
         </section>
 
         <!-- Projects Section -->
-        <section class="py-16 border-t border-gray-200" id="projects">
-            <h2 class="text-3xl font-bold text-primary mb-8 text-center">
-                Proyek
-            </h2>
-            <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
-                <article class="bg-white rounded-lg shadow overflow-hidden flex flex-col">
-                    <img alt="Tampilan website PPDB dengan halaman pendaftaran dan informasi sekolah"
-                        class="w-full object-cover h-48" height="400" src="assets/web-sultan.png" width="600" />
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-semibold text-gray-700 mb-2">
-                            Website PPDB SMK Sultan Al-Yasini
-                        </h3>
-                        <p class="text-gray-700 flex-grow">
-                            Sistem administrasi penerimaan peserta didik baru dengan fitur pendaftaran online dan
-                            manajemen data siswa.
-                        </p>
-                        <a class="mt-4 ms-auto inline-block text-primary font-semibold self-start px-4 py-1 rounded-md bg-gray-200 hover:bg-gray-300"
-                            href="https://ppdb.smkalyasini.com/">
-                            Lihat Website Sekarang
-                        </a>
-                    </div>
-                </article>
-                <article class="bg-white rounded-lg shadow overflow-hidden flex flex-col">
-                    <img alt="Tampilan aplikasi absensi online dengan daftar kehadiran dan fitur scan QR code"
-                        class="w-full object-cover h-48" height="400" src="assets/web-awash.png" width="600" />
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-semibold text-gray-700 mb-2">
-                            Website Absensi & Tugas Karyawan Awash Laundry
-                        </h3>
-                        <p class="text-gray-700 flex-grow">
-                            Aplikasi absensi online. Memudahkan
-                            pengelolaan kehadiran dan tugas karyawan secara efisien.
-                        </p>
-                        <a class="mt-4 ms-auto inline-block text-primary font-semibold self-start px-4 py-1 rounded-md bg-gray-200 hover:bg-gray-300"
-                            href="https://awash.id/">
-                            Lihat Website Sekarang
-                        </a>
-                    </div>
-                </article>
-                <article class="bg-white rounded-lg shadow overflow-hidden flex flex-col">
-                    <img alt="Tampilan website company profile dengan halaman beranda, layanan, dan kontak"
-                        class="w-full object-cover h-48" height="400" src="assets/web-cempaka.png" width="600" />
-                    <div class="p-6 flex flex-col flex-grow">
-                        <h3 class="text-xl font-semibold text-gray-700 mb-2">
-                            Website Company Profile Hutan Cempaka
-                        </h3>
-                        <p class="text-gray-700 flex-grow">
-                            Website company profile dan reservasi profesional dengan desain responsif dan konten
-                            dinamis.
-                        </p>
-                        <a class="mt-4 ms-auto inline-block text-primary font-semibold self-start px-4 py-1 rounded-md bg-gray-200 hover:bg-gray-300"
-                            href="https://hutancempaka.com/">
-                            Lihat Website Sekarang
-                        </a>
-                    </div>
-                </article>
+        <section class="py-20" id="projects">
+            <div class="max-w-6xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <div class="text-center mb-12">
+                    <h2 class="section-heading text-center mx-auto after:right-0 after:mx-auto">
+                        Proyek
+                    </h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article
+                        class="bg-white rounded-xl shadow-elegant overflow-hidden flex flex-col group hover:shadow-lg transition-shadow duration-300"
+                        data-aos="zoom-in" data-aos-delay="100">
+                        <div class="relative overflow-hidden">
+                            <img alt="Tampilan website PPDB dengan halaman pendaftaran dan informasi sekolah"
+                                class="w-full object-cover h-52 transition-transform duration-500 group-hover:scale-110"
+                                src="assets/web-sultan.png" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-4 w-full">
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="px-2 py-1 bg-white/20 backdrop-blur-sm text-white rounded text-xs">PHP</span>
+                                        <span
+                                            class="px-2 py-1 bg-white/20 backdrop-blur-sm text-white rounded text-xs">Laravel</span>
+                                        <span
+                                            class="px-2 py-1 bg-white/20 backdrop-blur-sm text-white rounded text-xs">MySQL</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3
+                                class="text-xl font-bold text-secondary mb-3 group-hover:text-primary transition-colors duration-300">
+                                Website PPDB SMK Sultan Al-Yasini
+                            </h3>
+                            <p class="text-gray-600 flex-grow">
+                                Sistem administrasi penerimaan peserta didik baru dengan fitur pendaftaran online dan
+                                manajemen data siswa.
+                            </p>
+                            <a class="mt-4 inline-block text-primary font-medium self-start relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all group-hover:after:w-full"
+                                href="https://ppdb.smkalyasini.com/" target="_blank">
+                                Lihat Website Sekarang <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                        class="bg-white rounded-xl shadow-elegant overflow-hidden flex flex-col group hover:shadow-lg transition-shadow duration-300"
+                        data-aos="zoom-in" data-aos-delay="200">
+                        <div class="relative overflow-hidden">
+                            <img alt="Tampilan aplikasi absensi online dengan daftar kehadiran dan fitur scan QR code"
+                                class="w-full object-cover h-52 transition-transform duration-500 group-hover:scale-110"
+                                src="assets/web-awash.png" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-4 w-full">
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="px-2 py-1 bg-white/20 backdrop-blur-sm text-white rounded text-xs">PHP</span>
+                                        <span
+                                            class="px-2 py-1 bg-white/20 backdrop-blur-sm text-white rounded text-xs">Laravel</span>
+                                        <span
+                                            class="px-2 py-1 bg-white/20 backdrop-blur-sm text-white rounded text-xs">JavaScript</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3
+                                class="text-xl font-bold text-secondary mb-3 group-hover:text-primary transition-colors duration-300">
+                                Website Absensi & Tugas Karyawan Awash Laundry
+                            </h3>
+                            <p class="text-gray-600 flex-grow">
+                                Aplikasi absensi online. Memudahkan
+                                pengelolaan kehadiran dan tugas karyawan secara efisien.
+                            </p>
+                            <a class="mt-4 inline-block text-primary font-medium self-start relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all group-hover:after:w-full"
+                                href="https://awash.id/" target="_blank">
+                                Lihat Website Sekarang <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+
+                    <article
+                        class="bg-white rounded-xl shadow-elegant overflow-hidden flex flex-col group hover:shadow-lg transition-shadow duration-300"
+                        data-aos="zoom-in" data-aos-delay="300">
+                        <div class="relative overflow-hidden">
+                            <img alt="Tampilan website company profile dengan halaman beranda, layanan, dan kontak"
+                                class="w-full object-cover h-52 transition-transform duration-500 group-hover:scale-110"
+                                src="assets/web-cempaka.png" />
+                            <div
+                                class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+                                <div class="p-4 w-full">
+                                    <div class="flex flex-wrap gap-2">
+                                        <span
+                                            class="px-2 py-1 bg-white/20 backdrop-blur-sm text-white rounded text-xs">HTML/CSS</span>
+                                        <span
+                                            class="px-2 py-1 bg-white/20 backdrop-blur-sm text-white rounded text-xs">JavaScript</span>
+                                        <span
+                                            class="px-2 py-1 bg-white/20 backdrop-blur-sm text-white rounded text-xs">PHP</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3
+                                class="text-xl font-bold text-secondary mb-3 group-hover:text-primary transition-colors duration-300">
+                                Website Company Profile Hutan Cempaka
+                            </h3>
+                            <p class="text-gray-600 flex-grow">
+                                Website company profile dan reservasi profesional dengan desain responsif dan konten
+                                dinamis.
+                            </p>
+                            <a class="mt-4 inline-block text-primary font-medium self-start relative after:absolute after:bottom-0 after:left-0 after:right-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all group-hover:after:w-full"
+                                href="https://hutancempaka.com/" target="_blank">
+                                Lihat Website Sekarang <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
         <!-- Contact Section -->
-        <section class="py-16 bg-gray-400 rounded-lg px-4" id="contact">
-            <h2 class="text-3xl font-bold text-white mb-8 text-center">
-                Kontak Saya
-            </h2>
-            <div class="max-w-3xl mx-auto bg-white rounded-lg shadow p-8">
-                <div
-                    class="flex flex-col sm:flex-row sm:justify-center sm:space-x-12 space-y-6 sm:space-y-0 text-gray-700 mb-4">
-                    <div class="flex items-center space-x-4">
-                        <i class="fab fa-whatsapp fa-2x text-green-500">
-                        </i>
-                        <a class="text-lg font-semibold hover:underline" href="https://wa.me/62885785800430?text=Halo%20saya%20mau%20tanya%20tentang%20pembuatan%20aplikasi?">
-                            +62 857-8580-0430
-                        </a>
-                    </div>
-                    <div class="flex items-center space-x-4">
-                        <i class="fas fa-envelope fa-2x text-red-500">
-                        </i>
-                        <a class="text-lg font-semibold hover:underline" href="mailto:bagusp0518@gmail.com">
-                            bagusp0518@gmail.com
-                        </a>
+        <section class="py-20" id="contact">
+            <div class="max-w-5xl mx-auto" data-aos="fade-up" data-aos-duration="1000">
+                <div class="text-center mb-12">
+                    <h2 class="section-heading text-center mx-auto after:right-0 after:mx-auto">
+                        Kontak Saya
+                    </h2>
+                </div>
+                <div class="bg-white rounded-xl shadow-elegant overflow-hidden">
+                    <div class="grid grid-cols-1 md:grid-cols-5">
+                        <div class="md:col-span-2 gradient-bg p-8 text-white flex flex-col justify-center">
+                            <h3 class="text-2xl font-bold mb-6">Mari Terhubung</h3>
+                            <p class="mb-8 text-white/80">
+                                Tertarik untuk bekerja sama? Jangan ragu untuk menghubungi saya melalui kontak di bawah
+                                atau melalui formulir di samping.
+                            </p>
+                            <div class="space-y-6">
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                                        <i class="fab fa-whatsapp text-white"></i>
+                                    </div>
+                                    <a class="text-lg font-medium hover:underline"
+                                        href="https://wa.me/62885785800430?text=Halo%20saya%20mau%20tanya%20tentang%20pembuatan%20aplikasi?"
+                                        target="_blank">
+                                        +62 857-8580-0430
+                                    </a>
+                                </div>
+                                <div class="flex items-center space-x-4">
+                                    <div class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center">
+                                        <i class="fas fa-envelope text-white"></i>
+                                    </div>
+                                    <a class="text-lg font-medium hover:underline" href="mailto:bagusp0518@gmail.com">
+                                        bagusp0518@gmail.com
+                                    </a>
+                                </div>
+                                <div class="pt-8 flex gap-4">
+                                    <a href="https://github.com/Baguspanji"
+                                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                                        <i class="fab fa-github text-white"></i>
+                                    </a>
+                                    <a href="https://www.linkedin.com/in/bagus-panji"
+                                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                                        <i class="fab fa-linkedin-in text-white"></i>
+                                    </a>
+                                    <a href="https://www.instagram.com/maguspanji"
+                                        class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                                        <i class="fab fa-instagram text-white"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md:col-span-3 p-8">
+                            <form action="mailto:bagusp0518@gmail.com" class="space-y-4" enctype="text/plain"
+                                method="POST">
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2" for="name">
+                                        Nama
+                                    </label>
+                                    <input
+                                        class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                        id="name" name="name" placeholder="Nama lengkap Anda" required="" type="text" />
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 font-medium mb-2" for="phone">
+                                        No. Telepon / Whatsapp
+                                    </label>
+                                    <input
+                                        class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                        id="phone" name="phone" placeholder="No. Telepon / Whatsapp Anda" required=""
+                                        type="text" />
+                                </div>
+                                <div class="pb-4">
+                                    <label class="block text-gray-700 font-medium mb-2" for="message">
+                                        Pesan
+                                    </label>
+                                    <textarea
+                                        class="w-full border border-gray-200 rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all"
+                                        id="message" name="message" placeholder="Tulis pesan Anda di sini" required=""
+                                        rows="5"></textarea>
+                                </div>
+                                <button class="elegant-button w-full" type="submit">
+                                    Kirim Pesan
+                                </button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-                <form action="mailto:your.email@example.com" class="space-y-2" enctype="text/plain" method="POST">
-                    <div>
-                        <label class="block text-gray-700 font-semibold mb-2" for="name">
-                            Nama
-                        </label>
-                        <input
-                            class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
-                            id="name" name="name" placeholder="Nama lengkap Anda" required="" type="text" />
-                    </div>
-                    <div>
-                        <label class="block text-gray-700 font-semibold mb-2" for="email">
-                            No. Telepon / Whatsapp
-                        </label>
-                        <input
-                            class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
-                            id="email" name="email" placeholder="No. Telepon / Whatsapp Anda" required="" type="text" />
-                    </div>
-                    <div class="pb-4 md:pb-2">
-                        <label class="block text-gray-700 font-semibold mb-2" for="message">
-                            Pesan
-                        </label>
-                        <textarea
-                            class="w-full border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-gray-500"
-                            id="message" name="message" placeholder="Tulis pesan Anda di sini" required=""
-                            rows="5"></textarea>
-                    </div>
-                    <button
-                        class="bg-gray-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-gray-700 transition w-full md:w-auto"
-                        type="submit">
-                        Kirim Pesan
-                    </button>
-                </form>
             </div>
         </section>
     </main>
 
-    <footer class="bg-white border-t border-gray-200 py-6 mt-16">
-        <div class="max-w-7xl mx-auto px-6 text-center text-gray-600 text-sm">
-            © 2024 Fullstack Programmer. Semua hak cipta dilindungi.
+    <footer class="bg-secondary text-white py-12 mt-16">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="flex flex-col md:flex-row justify-between items-center mb-8">
+                <div class="mb-6 md:mb-0">
+                    <a class="text-2xl font-bold text-white" href="#home">
+                        Portofolio
+                    </a>
+                    <p class="mt-2 text-white/70 max-w-md">
+                        Solusi terbaik untuk kebutuhan pengembangan website dan aplikasi Anda dengan teknologi terkini.
+                    </p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="https://github.com/Baguspanji" class="text-white/70 hover:text-white transition-colors">
+                        <i class="fab fa-github fa-lg"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/bagus-panji"
+                        class="text-white/70 hover:text-white transition-colors">
+                        <i class="fab fa-linkedin fa-lg"></i>
+                    </a>
+                    <a href="https://www.instagram.com/maguspanji"
+                        class="text-white/70 hover:text-white transition-colors">
+                        <i class="fab fa-instagram fa-lg"></i>
+                    </a>
+                    <!-- <a href="#" class="text-white/70 hover:text-white transition-colors">
+                        <i class="fab fa-twitter fa-lg"></i>
+                    </a> -->
+                </div>
+            </div>
+            <div class="pt-8 border-t border-white/10 text-center text-white/70 text-sm">
+                © 2024 Fullstack Programmer. Semua hak cipta dilindungi.
+            </div>
         </div>
     </footer>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
+        // Initialize AOS (Animate On Scroll)
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+
+        // Mobile Menu Toggle
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
+        const body = document.querySelector('body');
 
         menuBtn.addEventListener('click', () => {
+            // Toggle menu visibility
             mobileMenu.classList.toggle('hidden');
+
+            // Toggle menu icon
+            if (mobileMenu.classList.contains('hidden')) {
+                menuBtn.innerHTML = '<i class="fas fa-bars fa-lg"></i>';
+                body.classList.remove('overflow-hidden');
+            } else {
+                menuBtn.innerHTML = '<i class="fas fa-times fa-lg"></i>';
+                body.classList.add('overflow-hidden');
+            }
+        });
+
+        // Close mobile menu when clicking nav links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuBtn.innerHTML = '<i class="fas fa-bars fa-lg"></i>';
+                body.classList.remove('overflow-hidden');
+            });
+        });
+
+        // Add active class to navigation based on scroll position
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('header nav a');
+
+        window.addEventListener('scroll', () => {
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+
+                if (window.scrollY >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-primary', 'after:w-full');
+                const href = link.getAttribute('href').substring(1);
+
+                if (href === current) {
+                    link.classList.add('text-primary', 'after:w-full');
+                }
+            });
         });
     </script>
 </body>
